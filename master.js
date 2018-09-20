@@ -42,9 +42,7 @@ var DOMbod = document.getElementById('DOMbod');
                     var movie = document.createElement('li');
                     movie.textContent = newResponse.title;
                     movieList.appendChild(movie);
-                  } else {
-                    console.log("Error in network request: " + newReq.statusText);
-                  }});
+                  } });
                 newReq.send(null);
               })(e);
             }
