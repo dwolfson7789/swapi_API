@@ -19,21 +19,43 @@
     background-color: white;
     position: relative;
     width: 100%;
+    text-align: center;
+  }
+  ul {
+    max-width: 99%;
   }
 
   li {
-    font-size: calc(2px + 1.4vw);
+    font-size: calc(3px + 1vw);
+    font-weight: normal;
+    list-style: none;
+    display: inline;
+    background-color: black;
+    color: white;
+    max-width: 10%;
+    margin: 0 auto;
+    padding: 12px 20px;
+    margin-top: 5%;
+    border-left: 1px solid white;
+
   }
 
   div {
     position: relative;
     display: inline-block;
     width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: calc(3px + 2vw);
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 3%;
+    padding: 3% 0 1%;
+
+  }
+  #logo {
+    display: none;
   }
 
-  ul {
-    /* display: none; */
-  }
 
   .hero {
     color: black;

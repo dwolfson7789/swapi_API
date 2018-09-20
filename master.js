@@ -10,6 +10,10 @@ var DOMbod = document.getElementById('DOMbod');
       console.log(response);
       var tableHead = document.createElement('div');
       DOMbod.appendChild(tableHead);
+      // var person = document.createElement('h3');
+      // DOMbod.appendChild(person);
+      // person.textContent = response.results[y].name;
+
 // create ul push films to li
       var tabletList = document.createElement('ul');
       tableHead.appendChild(tabletList);
@@ -21,24 +25,17 @@ var DOMbod = document.getElementById('DOMbod');
           var filmIn = document.createElement('div')
           filmIn.setAttribute("id", "parent");
           filmIn.textContent = response.results[y].name;
-
-
-
           if (response.results[y].films.length > 0) {
-
-
             var movieHead = document.createElement('section');
             filmIn.appendChild(movieHead);
             var movieList = document.createElement('ul');
             movieHead.appendChild(movieList);
-            // var person = document.createElement('h3');
-            // DOMbod.appendChild(person);
-            // person.textContent = response.results[y].name;
             for (var e = 0; e < response.results[y].films.length; e++) {
               (function(x) {
-                var newURLhost = response.results[y].films[x];
+                var newURLhost = response.results[y].films[x]
                 var newReq = new XMLHttpRequest();
                 newReq.open('GET', newURLhost, true);
+        // click event listener person.textContent = response.results[y].name;
                 newReq.addEventListener('load', function(){
                   if(newReq.status >= 200 && newReq.status < 400){
                     var newResponse = JSON.parse(newReq.responseText);
